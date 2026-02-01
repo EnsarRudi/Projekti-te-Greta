@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaDrive | Cars</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><span>NovaDrive</span> Rent a Car</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="rent.html">Rent</a>
+        <a class="active" href="cars.html">Cars</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-links">
+        <span id="authWelcome" class="pill" style="display:none"></span>
+        <button class="cta outline" id="loginBtn">Login</button>
+        <button class="cta" id="signupBtn">Signup</button>
+        <button class="cta outline" id="logoutBtn" style="display:none">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-title">
+      <h2>Zgjidh makinën</h2>
+      <div class="badges">
+        <span class="badge">Rotacion 3D</span>
+        <span class="badge">Ngjyra & kosto</span>
+      </div>
+    </div>
+
+    <div class="card carousel">
+      <div class="carousel-track">
+        <article class="card">
+          <span class="pill">SUV • Automatike</span>
+          <img class="car-img" src="https://www.landrovernaperville.com/2023-land-rover-range-rover-evoque/" alt="Range Rover Evoque">
+          <h3>Range Rover Evoque</h3>
+          <p class="price">€140/ditë</p>
+          <div class="colors">
+            <span class="color-dot active" data-color="#000"></span>
+            <span class="color-dot" data-color="#1f6feb"></span>
+            <span class="color-dot" data-color="#c0c0c0"></span>
+          </div>
+          <p class="muted">4x4, paketë panoramike, asistencë premium.</p>
+        </article>
+        <article class="card">
+          <span class="pill">Sedan • Automatike</span>
+          <img class="car-img" src="https://www.topgear.com/sites/default/files/2024/04/TopGear%20-%20First%20Drive%20-%20BMW%205%20Series%202024-031.jpg" alt="BMW 5 Series">
+          <h3>BMW 5 Series</h3>
+          <p class="price">€110/ditë</p>
+          <div class="colors">
+            <span class="color-dot active" data-color="#1b1b1f"></span>
+            <span class="color-dot" data-color="#b41c1c"></span>
+            <span class="color-dot" data-color="#ffffff"></span>
+          </div>
+          <p class="muted">Head-up display, sedilje ngrohëse, CarPlay.</p>
+        </article>
+        <article class="card">
+          <span class="pill">SUV • Automatike</span>
+          <img class="car-img" src="https://images.prismic.io/carwow/aNXN0p5xUNkB1Hsj_audi-q3-2025-lhd-header.jpg?auto=format&cs=tinysrgb&fit=max&q=60" alt="Audi Q3">
+          <h3>Audi Q3</h3>
+          <p class="price">€95/ditë</p>
+          <div class="colors">
+            <span class="color-dot active" data-color="#0f62fe"></span>
+            <span class="color-dot" data-color="#333"></span>
+            <span class="color-dot" data-color="#d4a373"></span>
+          </div>
+          <p class="muted">SUV kompakt me asistencë adaptive cruise.</p>
+        </article>
+        <article class="card">
+          <span class="pill">City • Manuale</span>
+          <img class="car-img" src="IMG/download.jpg"alt="VW Golf 8">
+          <h3>VW Golf</h3>
+          <p class="price">€55/ditë</p>
+          <div class="colors">
+            <span class="color-dot active" data-color="#ffffff"></span>
+            <span class="color-dot" data-color="#1f6feb"></span>
+            <span class="color-dot" data-color="#2f3e46"></span>
+          </div>
+          <p class="muted">Efiçent, parkim i lehtë, asistencë për korsitë.</p>
+        </article>
+      </div>
+      <div class="carousel-controls">
+        <button class="control" id="prevCar">‹</button>
+        <button class="control" id="nextCar">›</button>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <h2>Kalkulo çmimin</h2>
+    </div>
+    <div class="card">
+      <form class="two-col" id="priceCalculator">
+        <div>
+          <label>Modeli</label>
+          <select id="carSelect" name="car">
+            <option data-price="55" value="VW Golf">VW Golf — €55/ditë</option>
+            <option data-price="95" value="Audi Q3">Audi Q3 — €95/ditë</option>
+            <option data-price="110" value="BMW 5 Series">BMW 5 Series — €110/ditë</option>
+            <option data-price="140" value="Range Rover Evoque">Range Rover Evoque — €140/ditë</option>
+          </select>
+        </div>
+        <div>
+          <label>Ditet</label>
+          <input id="rentalDays" type="number" value="4" min="1">
+        </div>
+      </form>
+      <div class="status" id="pricePreview">Totali: €0.00</div>
+      <a class="cta" href="rent.html" style="margin-top:12px; display:inline-flex;">Vazhdo me dokumentet</a>
+    </div>
+  </main>
+
+  <footer>© 2025 NovaDrive. Zgjidh makinën tënde.</footer>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Hyrje</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="loginForm">
+        <label>Email</label>
+        <input name="email" type="email" placeholder="you@example.com" required>
+        <label>Fjalëkalimi</label>
+        <input name="password" type="password" placeholder="••••••••" required>
+        <div id="loginStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Krijo llogari</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="signupForm">
+        <label>Emri i plotë</label>
+        <input name="name" placeholder="Emri Mbiemri" required>
+        <label>Email</label>
+        <input name="email" type="email" placeholder="you@example.com" required>
+        <label>Fjalëkalimi</label>
+        <input name="password" type="password" placeholder="Minimumi 8 karaktere" required>
+        <div id="signupStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Regjistrohu</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

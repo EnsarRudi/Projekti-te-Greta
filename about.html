@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaDrive | About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><span>NovaDrive</span> Rent a Car</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="rent.html">Rent</a>
+        <a href="cars.html">Cars</a>
+        <a class="active" href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-links">
+        <span id="authWelcome" class="pill" style="display:none"></span>
+        <button class="cta outline" id="loginBtn">Login</button>
+        <button class="cta" id="signupBtn">Signup</button>
+        <button class="cta outline" id="logoutBtn" style="display:none">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="pill">Rreth nesh</p>
+        <h1>NovaDrive, partneri yt i udhëtimeve.</h1>
+        <p>Nisi si një ekip i vogël pasionantësh të makinave. Sot ofrojmë flotën më të re në rajon dhe procesin më të shpejtë të marrjes në dorëzim.</p>
+      </div>
+      <div class="floating-card" style="position:relative; background: rgba(0,0,0,0.45);">
+        <strong>Statistika të shpejta</strong>
+        <p>2500+ rezervime vjetore</p>
+        <p>95% kënaqësi klienti</p>
+        <p>12 minuta mesatarisht nga rezervimi në dorëzim</p>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>Çfarë na bën ndryshe</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Teknologji</h3>
+        <p>Proces i digjitalizuar: firmos online, track-on-time dhe verifikim dokumentesh në sekonda.</p>
+      </div>
+      <div class="card">
+        <h3>Siguri</h3>
+        <p>Sigurim i plotë, asistencë rrugore dhe inspektime periodike të çdo mjeti.</p>
+      </div>
+      <div class="card">
+        <h3>Fleksibilitet</h3>
+        <p>Paketa ditore, javore ose mujore. Mundësi ndërrimi modeli gjatë kontratës.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 NovaDrive. Me ju në çdo hap.</footer>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Hyrje</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="loginForm">
+        <label>Email</label>
+        <input name="email" type="email" placeholder="you@example.com" required>
+        <label>Fjalëkalimi</label>
+        <input name="password" type="password" placeholder="••••••••" required>
+        <div id="loginStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Krijo llogari</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="signupForm">
+        <label>Emri i plotë</label>
+        <input name="name" placeholder="Emri Mbiemri" required>
+        <label>Email</label>
+        <input name="email" type="email" placeholder="you@example.com" required>
+        <label>Fjalëkalimi</label>
+        <input name="password" type="password" placeholder="Minimumi 8 karaktere" required>
+        <div id="signupStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Regjistrohu</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

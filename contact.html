@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaDrive | Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><span>NovaDrive</span> Rent a Car</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="rent.html">Rent</a>
+        <a href="cars.html">Cars</a>
+        <a href="about.html">About</a>
+        <a class="active" href="contact.html">Contact</a>
+      </div>
+      <div class="nav-links">
+        <span id="authWelcome" class="pill" style="display:none"></span>
+        <button class="cta outline" id="loginBtn">Login</button>
+        <button class="cta" id="signupBtn">Signup</button>
+        <button class="cta outline" id="logoutBtn" style="display:none">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section-title">
+      <h2>Na kontakto</h2>
+      <span class="pill">Përgjigje brenda 10 minutash</span>
+    </div>
+
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      <div class="card">
+        <form>
+          <label>Emri</label>
+          <input placeholder="Emri Mbiemri" required>
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" required>
+          <label>Mesazhi</label>
+          <textarea rows="4" placeholder="Na tregoni se çfarë ju duhet" required></textarea>
+          <button class="cta" type="submit">Dërgo</button>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Qendra e suportit</h3>
+        <p>Telefon: +383 44 123 456</p>
+        <p>Email: support@novadrive.com</p>
+        <p>Orari: 24/7</p>
+        <div class="card" style="margin-top:12px;">
+          <h4>Lokacionet kryesore</h4>
+          <p>Prishtinë • Tiranë • Shkup</p>
+          <p>Aeroport • Qendër qyteti • Dorëzim në adresë</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 NovaDrive. Ne jemi këtu për ju.</footer>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Hyrje</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="loginForm">
+        <label>Email</label>
+        <input name="email" type="email" placeholder="you@example.com" required>
+        <label>Fjalëkalimi</label>
+        <input name="password" type="password" placeholder="••••••••" required>
+        <div id="loginStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Krijo llogari</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="signupForm">
+        <label>Emri i plotë</label>
+        <input name="name" placeholder="Emri Mbiemri" required>
+        <label>Email</label>
+        <input name="email" type="email" placeholder="you@example.com" required>
+        <label>Fjalëkalimi</label>
+        <input name="password" type="password" placeholder="Minimumi 8 karaktere" required>
+        <div id="signupStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Regjistrohu</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

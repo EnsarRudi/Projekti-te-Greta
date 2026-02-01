@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaDrive | Rent a Car</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><span>NovaDrive</span> Rent a Car</a>
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="rent.html">Rent</a>
+        <a href="cars.html">Cars</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-links">
+        <span id="authWelcome" class="pill" style="display:none"></span>
+        <button class="cta outline" id="loginBtn">Login</button>
+        <button class="cta" id="signupBtn">Signup</button>
+        <button class="cta outline" id="logoutBtn" style="display:none">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="pill">Premium, i shpejtë, 24/7</p>
+        <h1>Gati për udhëtimin tënd të radhës? Merr makinën në pak minuta.</h1>
+        <p>Fleksibilitet maksimal, çmime transparente dhe asistencë rrugore kudo në vend. Rezervo online dhe nise aventurën.</p>
+        <div class="badges">
+          <span class="badge">Flotë 2023-2024</span>
+          <span class="badge">Sigurim i plotë</span>
+          <span class="badge">Dorëzim në aeroport</span>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="cta" href="rent.html">Rezervo tani</a>
+          <a class="cta outline" href="cars.html">Shfleto flotën</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://vehicle-images.dealerinspire.com/fdc6-110012062/4JGFD6BB8SB346090/8a9ea33b51a84cd72c0bf814a740a13b.jpg" alt="Range Rover Evoque">
+        <div class="floating-card">
+          <strong>72% më shpejt</strong>
+          <p style="margin:6px 0 0;">Proces i plotë online, dokumentacion i thjeshtë.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>Flota Premium</h2>
+      <a class="cta outline" href="cars.html">Shiko të gjitha</a>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <span class="pill">SUV • Automatike</span>
+        <img class="car-img" src="https://media.ed.edmunds-media.com/land-rover/range-rover/2025/oem/2025_land-rover_range-rover_4dr-suv_p530-autobiography_fq_oem_1_1280.jpg" alt="Range Rover Evoque">
+        <h3>Range Rover Evoque</h3>
+        <p class="price">€140/ditë</p>
+        <p class="muted">Komoditet i lartë, 4x4, asistencë premium.</p>
+      </article>
+      <article class="card">
+        <span class="pill">Sedan • Automatike</span>
+        <img class="car-img" src="https://www.topgear.com/sites/default/files/2024/04/TopGear%20-%20First%20Drive%20-%20BMW%205%20Series%202024-031.jpg" alt="BMW 5 Series">
+        <h3>BMW 5 Series</h3>
+        <p class="price">€110/ditë</p>
+        <p class="muted">Teknologji e avancuar, komoditet biznesi.</p>
+      </article>
+      <article class="card">
+        <span class="pill">City • Manuale</span>
+        <img class="car-img" src="https://assets.volkswagen.com/is/image/volkswagenag/white-golf-r-image?Zml0PWNyb3AsMSZmbXQ9cG5nLWFscGhhJndpZD0xNjAwJmhlaT05MDAmYmZjPW9mZiY5YWYy" alt="VW Golf 8">
+        <h3>VW Golf 8</h3>
+        <p class="price">€55/ditë</p>
+        <p class="muted">Efiçente, kompakte dhe perfekte për qytet.</p>
+      </article>
+    </div>
+
+    <div class="section-title">
+      <h2>Pse të zgjedhësh NovaDrive</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Proces i thjeshtë</h3>
+        <p>Rezervim online, verifikim dokumentesh dhe pagesë e sigurt brenda pak minutash.</p>
+      </div>
+      <div class="card">
+        <h3>Mbështetje 24/7</h3>
+        <p>Asistencë rrugore dhe suport klienti në çdo qytet ku operojmë.</p>
+      </div>
+      <div class="card">
+        <h3>Çmime transparente</h3>
+        <p>Pa tarifa të fshehura. Shfaqim qartë sigurimin, kilometrat dhe depozitën.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 NovaDrive. Gati për çdo destinacion.
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Hyrje</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="loginForm">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" name="email" type="email" placeholder="you@example.com" required>
+        <label for="loginPassword">Fjalëkalimi</label>
+        <input id="loginPassword" name="password" type="password" placeholder="••••••••" required>
+        <div id="loginStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Krijo llogari</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="signupForm">
+        <label for="signupName">Emri i plotë</label>
+        <input id="signupName" name="name" placeholder="Emri Mbiemri" required>
+        <label for="signupEmail">Email</label>
+        <input id="signupEmail" name="email" type="email" placeholder="you@example.com" required>
+        <label for="signupPassword">Fjalëkalimi</label>
+        <input id="signupPassword" name="password" type="password" placeholder="Minimumi 8 karaktere" required>
+        <div id="signupStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Regjistrohu</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaDrive | Rent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="index.html"><span>NovaDrive</span> Rent a Car</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="rent.html">Rent</a>
+        <a href="cars.html">Cars</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-links">
+        <span id="authWelcome" class="pill" style="display:none"></span>
+        <button class="cta outline" id="loginBtn">Login</button>
+        <button class="cta" id="signupBtn">Signup</button>
+        <button class="cta outline" id="logoutBtn" style="display:none">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="pill">Dokumentacion i thjeshtuar</p>
+        <h1>Plotëso dokumentet dhe merr çelësat pa pritje.</h1>
+        <p>Na dërgo lejen e drejtimit, zgjidh makinën dhe periudhën. Ne përgatisim kontratën automatikisht.</p>
+      </div>
+      <div class="floating-card" style="position:relative; background: rgba(0,0,0,0.45);">
+        <strong>Hapat e shpejtë</strong>
+        <ol style="margin:12px 0 0; padding-left:18px; color:#e8ecff;">
+          <li>Plotëso formularin</li>
+          <li>Verifikojmë licencën</li>
+          <li>Nënshkruaj online</li>
+          <li>Merr makinën</li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>Formulari i rezervimit & dokumentacionit</h2>
+      <span class="pill" id="pricePreview"></span>
+    </div>
+
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      <div class="card">
+        <form id="rentForm">
+          <label for="fullName">Emri i plotë</label>
+          <input id="fullName" name="fullName" placeholder="Emri Mbiemri" required>
+
+          <label for="license">Numri i lejes së drejtimit</label>
+          <input id="license" name="license" placeholder="AB123456" required>
+
+          <div class="two-col">
+            <div>
+              <label for="pickup">Data e marrjes</label>
+              <input id="pickup" name="pickup" type="date" required>
+            </div>
+            <div>
+              <label for="dropoff">Data e dorëzimit</label>
+              <input id="dropoff" name="dropoff" type="date" required>
+            </div>
+          </div>
+
+          <label for="carSelect">Zgjidh makinën</label>
+          <select id="carSelect" name="car" required>
+            <option data-price="55" value="VW Golf">VW Golf — €55/ditë</option>
+            <option data-price="110" value="BMW 5 Series">BMW 5 Series — €110/ditë</option>
+            <option data-price="140" value="Range Rover Evoque">Range Rover Evoque — €140/ditë</option>
+            <option data-price="95" value="Audi Q3">Audi Q3 — €95/ditë</option>
+          </select>
+
+          <label for="colorSelect">Ngjyra</label>
+          <select id="colorSelect" name="color">
+            <option value="E zezë">E zezë</option>
+            <option value="E bardhë">E bardhë</option>
+            <option value="Blu">Blu</option>
+            <option value="E kuqe">E kuqe</option>
+          </select>
+
+          <label for="rentalDays">Sa ditë do ta mbani?</label>
+          <input id="rentalDays" name="days" type="number" min="1" value="3" required>
+
+          <label for="notes">Kërkesa shtesë</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Silleni në aeroport, sedilje fëmijësh, etj."></textarea>
+
+          <div id="rentSummary" class="status" aria-live="polite"></div>
+          <button class="cta" type="submit">Dërgo rezervimin</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Çfarë përfshihet</h3>
+        <ul style="color:var(--muted); line-height:1.8; padding-left:18px;">
+          <li>Sigurim i plotë me mbulim ndërkombëtar</li>
+          <li>Asistencë 24/7 në rrugë</li>
+          <li>Kilometrazh fleksibël sipas paketës</li>
+          <li>Opsion për shofer shtesë</li>
+          <li>Dorëzim & marrje në vendndodhjen tuaj</li>
+        </ul>
+        <div class="card" style="margin-top:12px;">
+          <h4>Tarifat e shpejta</h4>
+          <p>Depozita: €200 - €500 (varësisht nga modeli)</p>
+          <p>Pagesa e sigurimit: përfshihet në çmim ditor</p>
+          <p>Penalitet vonese: €20/orë</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 NovaDrive. Rezervimet janë të sigurta.</footer>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Hyrje</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="loginForm">
+        <label>Email</label>
+        <input name="email" type="email" placeholder="you@example.com" required>
+        <label>Fjalëkalimi</label>
+        <input name="password" type="password" placeholder="••••••••" required>
+        <div id="loginStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Krijo llogari</h3>
+        <button class="close" data-close>&times;</button>
+      </div>
+      <form id="signupForm">
+        <label>Emri i plotë</label>
+        <input name="name" placeholder="Emri Mbiemri" required>
+        <label>Email</label>
+        <input name="email" type="email" placeholder="you@example.com" required>
+        <label>Fjalëkalimi</label>
+        <input name="password" type="password" placeholder="Minimumi 8 karaktere" required>
+        <div id="signupStatus" class="status" aria-live="polite"></div>
+        <button class="cta" type="submit">Regjistrohu</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
