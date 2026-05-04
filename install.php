@@ -154,3 +154,4 @@ $db_name = 'novadrive';
 </body>
 </html>
 
+Instalimi
