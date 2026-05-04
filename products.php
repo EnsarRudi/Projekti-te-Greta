@@ -73,3 +73,4 @@ $products = $product->getAll();
 
 <?php include 'includes/footer.php'; ?>
 
+// products update
