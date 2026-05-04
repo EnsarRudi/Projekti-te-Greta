@@ -112,3 +112,4 @@ INSERT INTO slider_content (title, description, image_path, display_order) VALUE
 ('Flotë 2023-2024', 'Fleksibilitet maksimal, çmime transparente dhe asistencë rrugore kudo në vend.', 'IMG/RR_EVQ_24MY_DYNAMIC_HSE_210623_03.jpg', 2),
 ('Sigurim i plotë', 'Rezervo online dhe nise aventurën me siguri të plotë.', 'IMG/aNXN0p5xUNkB1Hsj_audi-q3-2025-lhd-header.avif', 3);
 
+Databaza
