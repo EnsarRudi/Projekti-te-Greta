@@ -97,3 +97,4 @@ Projekti te Greta/
 
 **Projekti është gati për përdorim! 🎉**
 
+Lista
