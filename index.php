@@ -131,4 +131,4 @@ $features = $aboutContent->getAll();
 </main>
 
 <?php include 'includes/footer.php'; ?>
-
+<!-- homepage update -->
