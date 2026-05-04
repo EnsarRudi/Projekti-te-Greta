@@ -42,3 +42,4 @@ $newsItems = $news->getAll();
 
 <?php include 'includes/footer.php'; ?>
 
+Newest News
