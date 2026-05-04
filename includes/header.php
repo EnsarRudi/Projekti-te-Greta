@@ -39,4 +39,5 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
       </div>
     </nav>
   </header>
+  <!-- avoiding problems -->
 
