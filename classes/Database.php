@@ -39,4 +39,4 @@ class Database {
         return $this->conn;
     }
 }
-
+<!-- fixing problems -->
