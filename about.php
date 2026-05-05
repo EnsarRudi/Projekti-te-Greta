@@ -54,4 +54,4 @@ $sections = $aboutContent->getAll();
 </main>
 
 <?php include 'includes/footer.php'; ?>
-
+PHP  
