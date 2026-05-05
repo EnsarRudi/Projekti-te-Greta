@@ -22,3 +22,4 @@ echo "<p>api/auth.php exists: " . (file_exists($apiPath) ? "YES ✓" : "NO ✗")
 echo "<p>Full path: " . $apiPath . "</p>";
 ?>
 
+API Paths
