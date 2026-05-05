@@ -186,4 +186,4 @@ switch ($action) {
         echo json_encode(['success' => false, 'message' => 'Aksion i pavlefshëm.']);
 }
 
-<!-- fix  -->
+Aksionet 
